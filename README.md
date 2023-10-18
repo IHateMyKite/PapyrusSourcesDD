@@ -12,7 +12,7 @@ Then only run the script.
 
 **BUILD_ONE.bat** = Build one script by typing its name in command prompt
 
-**BUILD_ONE_EXE.bat** = Same as BUILD_ONE.bat, but doesnt open command prompt. Instead, it build script which is passed as argument to the script. 
+**BUILD_ONE_EX.bat** = Same as BUILD_ONE.bat, but doesnt open command prompt. Instead, it build script which is passed as argument to the script. 
 
 
 ## How to use in Notepad++
