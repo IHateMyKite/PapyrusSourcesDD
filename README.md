@@ -28,6 +28,6 @@ For example, if we have source script in folder
 
     MO2\MyCoolMode\Script\Source\MySuperScript.psc
 
-Then the BUILD_ONE_EXE.bat have to be in 
+Then the BUILD_ONE_EX.bat have to be in 
 
     MO2\MyCoolMode\Script
