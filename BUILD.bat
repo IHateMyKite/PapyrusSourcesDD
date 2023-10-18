@@ -2,7 +2,7 @@
 
 echo **Running Papyrus Compiler for all script
 
-PapyrusCompiler "../Scripts/Source" -o="../Scripts" -all -i="../Scripts/Source;SRC;SRC_OTHER;SRC_LAL;SRC_ZAZ;SRC_PO3;SRC_DD;SRC_SKYUI;SRC_PAPUTIL;SRC_SXL;SRC_MFG;SRC_RM;SRC_FNIS;SRC_SLA;SRC_XPMSE" -optimize -f="Flags.flg"
+PapyrusCompiler "../Scripts/Source" -o="../Scripts" -all -i="../Scripts/Source;SRC;SRC_SLIF;SRC_OTHER;SRC_LAL;SRC_ZAZ;SRC_PO3;SRC_DD;SRC_SKYUI;SRC_PAPUTIL;SRC_SXL;SRC_MFG;SRC_RM;SRC_FNIS;SRC_SLA;SRC_XPMSE" -optimize -f="Flags.flg"
 
 if NOT ["%errorlevel%"]==["0"] (
     echo **Error compiling one or more scripts
