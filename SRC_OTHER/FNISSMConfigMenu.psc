@@ -12,4 +12,4 @@ function set_smweight(int oid, int i)
 endfunction
 function set_smplayer(int i)
 endfunction
-;This file was cleaned with papyrusSourceHeadliner
+;This file was cleaned with PapyrusSourceHeadliner 1

@@ -19,4 +19,4 @@ int function getflags( bool abcreature = false ) global
 endfunction
 bool function isrelease( bool abcreature = false ) global
 endfunction
-;This file was cleaned with papyrusSourceHeadliner
+;This file was cleaned with PapyrusSourceHeadliner 1

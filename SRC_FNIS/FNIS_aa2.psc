@@ -5,4 +5,4 @@ string[] function getaaprefixlist(int nmods, string mod, bool debugoutput = fals
 endfunction
 string[] function getaasetlist(int nsets, string mod, bool debugoutput = false) global
 endfunction
-;This file was cleaned with papyrusSourceHeadliner
+;This file was cleaned with PapyrusSourceHeadliner 1

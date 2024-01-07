@@ -5,4 +5,4 @@ actorbase property playerhousemannequin auto
 soulgem property whiterunsoulgem auto
 event oninit()
 endevent
-;This file was cleaned with papyrusSourceHeadliner
+;This file was cleaned with PapyrusSourceHeadliner 1

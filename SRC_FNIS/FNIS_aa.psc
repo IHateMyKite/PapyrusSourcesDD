@@ -121,4 +121,4 @@ int function _sprint() global
 endfunction
 int function _shield() global
 endfunction
-;This file was cleaned with papyrusSourceHeadliner
+;This file was cleaned with PapyrusSourceHeadliner 1

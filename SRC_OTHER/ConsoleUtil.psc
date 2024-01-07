@@ -5,4 +5,4 @@ string function readmessage() global native
 function executecommand(string text) global native
 objectreference function getselectedreference() global native
 function setselectedreference(objectreference obj) global native
-;This file was cleaned with papyrusSourceHeadliner
+;This file was cleaned with PapyrusSourceHeadliner 1
