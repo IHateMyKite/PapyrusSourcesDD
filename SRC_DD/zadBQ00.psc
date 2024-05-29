@@ -38,9 +38,35 @@ bool property processharnessevent auto
 bool property processplugsevent auto
 bool property tainted auto ; not going to offer support for tainted installations.
 string[] property registry auto
+string[] property armbinderblowjob auto hidden
+string[] property armbindervaginal auto hidden
+string[] property armbinderanal auto hidden
+string[] property armbinderlesbian auto hidden
+string[] property elbowbinderblowjob auto hidden
+string[] property elbowbindervaginal auto hidden
+string[] property elbowbinderanal auto hidden
+string[] property elbowbinderlesbian auto hidden
+string[] property yokeblowjob auto hidden
+string[] property yokevaginal auto hidden
+string[] property yokeanal auto hidden
+string[] property yokelesbian auto hidden
+string[] property bbyokeblowjob auto hidden
+string[] property bbyokevaginal auto hidden
+string[] property bbyokeanal auto hidden
+string[] property cuffedblowjob auto hidden
+string[] property cuffedvaginal auto hidden
+string[] property cuffedanal auto hidden
+string[] property cuffedlesbian auto hidden
+string[] property cuffedother auto hidden
+string[] property petsuitblowjob auto hidden
+string[] property petsuitvaginal auto hidden
+string[] property petsuitanal auto hidden
+string[] property boundmasturbation  auto hidden
 function shutdown(bool silent=false)
 endfunction
 event oninit()
+endevent
+event onupdate()
 endevent
 event oninitialize(string eventname, string strarg, float numarg, form sender)
 endevent
@@ -51,6 +77,8 @@ endfunction
 function checkcompatibility(string name, float required, float current)
 endfunction
 function versionchecks()
+endfunction
+function checknativeplugins()
 endfunction
 function rehook()
 endfunction
@@ -64,7 +92,7 @@ string function getcreaturetype(sslbaseanimation previousanim)
 endfunction
 sslbaseanimation[] function selectvalidddanimations(actor[] actors, int count, bool forceaggressive = false, string includetag = "", string suppresstag = "")
 endfunction
-sslbaseanimation[] function selectvalidanimations(sslthreadcontroller controller, int count, sslbaseanimation previousanim, bool usingarmbinder, bool usingyoke,  bool hasboundactors,  bool forceaggressive, bool permitoral, bool permitvaginal, bool permitanal, bool permitboobs)
+sslbaseanimation[] function selectvalidanimations(sslthreadcontroller controller, int count, sslbaseanimation previousanim, bool hasboundactors, bool forceaggressive, bool permitoral, bool permitvaginal, bool permitanal, bool permitboobs)
 endfunction
 string function getsuppressstring(bool aggressive, bool boundarmbinder, bool boundyoke, bool permitoral, bool permitvaginal, bool permitanal, bool permitboobs, string suppresstag = "") 
 endfunction

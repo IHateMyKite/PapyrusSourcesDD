@@ -42,43 +42,13 @@ function setexpressionexpression(float[] apexpression,int aiexpression_type,int 
 endfunction
 float[] function createrandomexpression() global
 endfunction
-float[] function applystrentghtoexpression(float[] apexpression,int aistrength) global
-endfunction
-bool function compareexpressions(float[] apexpression1, float[] apexpression2, bool abphoneme = true, bool abexpressionmod = true) global
-endfunction
 function applygageffect(actor akactor)
-endfunction
-function applygageffect_v2(actor akactor,int[] apgagpreset,faction[] apgagmodfactions)
 endfunction
 function removegageffect(actor akactor)
 endfunction
 event oninit()
 endevent
-event onupdate()
-endevent
 function maintenance()
-endfunction
-bool function checkexpressionblock(actor akactor,int aipriority, int aimode = 0)
-endfunction
-function startexpressionmutex(actor akactor)
-endfunction
-function endexpressionmutex(actor akactor)
-endfunction
-function setexpression(actor akactor, sslbaseexpression akexpression, int aistrength, bool aiopenmouth=false)
-endfunction
-function setexpressionraw(actor akactor, float[]  apexpression, int aistrength, bool aiopenmouth=false)
-endfunction
-float[] function applygageffecttopreset(actor akactor,float[] appreset)
-endfunction
-float[] function processgageffecttopreset(actor akactor, int[] apgagpreset,faction[] apgagmodfactions)
-endfunction
-function applygagmodifiers(actor akactor, float[] apexpression, faction[] apgagfactions, int[] apdefaultvalues)
-endfunction
-function applypresetfloats_nomc(actor actorref, float[] appreset, bool abphoneme = true,bool abexpressionmod = true) global 
-endfunction
-function updatepresetfloats_nomc(actor actorref, float[] appreset,float[] appreset_p, bool abphoneme = true,bool abexpressionmod = true) global 
-endfunction
-function resetpresetfloats_nomc(actor akactor, bool abphoneme = true,bool abexpressionmod = true) global 
 endfunction
 int[] function loadgagexpfromjson(string asfilepath,string asflag = "defaultgagexpression")
 endfunction

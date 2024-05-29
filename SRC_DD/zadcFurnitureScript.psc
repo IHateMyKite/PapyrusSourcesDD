@@ -104,7 +104,7 @@ function lockactor(actor act)
 endfunction
 function unlockactor()
 endfunction
-event onkeydown(int keycode)  
+event onkeydown(int keycode) 
 endevent 
 bool function canmakeunlockattempt()
 endfunction
@@ -125,6 +125,8 @@ endfunction
 event onactivate(objectreference akactionref) 
 endevent
 bool function passerbyaction()
+endfunction
+bool function sexwithnpcaction()
 endfunction
 event onupdate()   
 endevent

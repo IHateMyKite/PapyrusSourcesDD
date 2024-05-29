@@ -69,6 +69,8 @@ bool property debugsigterm = false auto
 bool property debugfixdevices = false auto
 bool property lockmenuwhentied = true auto
 bool property registerdevices = false auto
+bool property gotosla = false  auto hidden
+bool property gotslif = false  auto hidden
 string[] property esccapedifficultylist auto
 globalvariable property zaddebugmode auto
 function setupblindfolds()

@@ -297,9 +297,9 @@ bool function tightendevice(actor akactor, armor deviceinventory)
 endfunction
 bool function untightendevice(actor akactor, armor deviceinventory)
 endfunction
-bool function cantightendevice(actor akactor, armor deviceinventory) 
+bool function cantightendevice(actor akactor, armor akdeviceinventory)
 endfunction
-bool function canuntightendevice(actor akactor, armor deviceinventory) 
+bool function canuntightendevice(actor akactor, armor akdeviceinventory)
 endfunction
 int function islockjammed(actor akactor, keyword zad_deviousdevice)
 endfunction
@@ -450,8 +450,6 @@ function edgeactor(actor akactor)
 endfunction
 float function getmoanvolume(actor akactor, int exposure = -1)
 endfunction
-function doapplyexpression(int[] presets, actor actorref, bool hasgag = false) global
-endfunction
 function applyexpression(actor akactor, sslbaseexpression expression, int strength, bool openmouth=false)
 endfunction
 function resetexpression(actor akactor, sslbaseexpression expression)
@@ -469,6 +467,8 @@ endfunction
 string function buildpostvibrationstring(actor akactor, int vibstrength, bool vplug, bool aplug, bool vpiercings, bool npiercings)
 endfunction
 int function vibrateeffect(actor akactor, int vibstrength, int duration, bool teaseonly=false, bool silent = false)
+endfunction
+int function vibrateeffectv2(actor akactor, int vibstrength, int duration, bool teaseonly=false, bool silent = false, bool allowactorinscene = false)
 endfunction
 function attrdrain(actor akactor, string attr)
 endfunction
@@ -488,6 +488,8 @@ function spellcastvibrate(actor akactor, form tmp)
 endfunction
 bool function isvalidactor(actor akactor)
 endfunction
+bool function isvalidactorv2(actor akactor, bool overridescenecheck = false)
+endfunction
 function disablecontrols() 
 endfunction
 function updatecontrols()
@@ -506,15 +508,13 @@ int function getvibrating(actor akactor)
 endfunction
 function applygageffect(actor akactor)
 endfunction
-function applygageffect_v2(actor akactor,int[] apgagexp,faction[] apgagmodfactions)
-endfunction
 function removegageffect(actor akactor)
 endfunction
 function sendgageffectevent(actor akactor, bool isremove)
 endfunction
 string function makesingularifplural(string thestring)
 endfunction
-string function animswitchkeyword(actor akactor, string idlename )
+string function animswitchkeyword( actor akactor, string idlename )
 endfunction
 function repopulatenpcs()
 endfunction

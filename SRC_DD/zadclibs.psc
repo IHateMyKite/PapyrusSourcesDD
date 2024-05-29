@@ -58,6 +58,8 @@ actor function getuser(objectreference furnituredevice)
 endfunction
 bool function isvalidactor(actor akactor)
 endfunction
+bool function isvalidactorv2(actor akactor, bool overridescenecheck = false)
+endfunction
 objectreference function getdevice(actor act)
 endfunction
 key function getdevicekey(objectreference furnituredevice)
@@ -78,6 +80,8 @@ bool function settimedrelease(objectreference furnituredevice, int hours, bool r
 endfunction
 bool function lockactor(actor akactor, objectreference furnituredevice, package overridepose = none)
 endfunction
+bool function lockactorv2(actor akactor, objectreference furnituredevice, package overridepose = none, bool allowactorinscene = false)
+endfunction
 bool function unlockactor(actor akactor)
 endfunction
 bool function playsexscene(actor user, actor partner, string animationname = "")
@@ -94,7 +98,9 @@ bool function setblueprint(objectreference furnituredevice, miscobject blueprint
 endfunction
 objectreference function bobthebuilder(activator furnituretobuild, objectreference wheretobuild = none)
 endfunction
-event oninit()  
+event oninit()
+endevent
+event onupdate()
 endevent
 function initlibrary()
 endfunction
@@ -111,6 +117,8 @@ endfunction
 bool function isanimating(actor akactor)
 endfunction
 function furnitureaction()
+endfunction
+function furnitureactionv2(bool allowactorinscene = false)
 endfunction
 function closemenus()
 endfunction

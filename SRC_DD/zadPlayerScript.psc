@@ -6,18 +6,22 @@ zadlibs property libs auto
 formlist property sitblockkeywords auto
 armor property zad_devicehider auto
 zadgagvoices property voices auto
-function initgagspeak(bool firsttime) 
+function initgagspeak(bool firsttime)
 endfunction
 event onanimationstart(string eventname, string argstring, float argnum, form sender)
 endevent
 event registergagsound(string eventname, string argstring, float argnum, form sender)
 endevent
-function registerevents()  
+function registerevents()
 endfunction
 event oninit()
 endevent
+event onupdate()
+endevent
 event onplayerloadgame()
 endevent
+function checkforsoftdepends()
+endfunction
 event onitemremoved(form akbaseitem, int aiitemcount, objectreference akitemreference, objectreference akdestcontainer)
 endevent
 event onsit(objectreference akfurniture)
@@ -34,6 +38,6 @@ event onobjectequipped(form akbaseobject, objectreference akreference)
 endevent
 event onobjectunequipped(form akbaseobject, objectreference akreference)
 endevent
-keyword property armorjewelry  auto  
-keyword property sexlabnostrip  auto  
+keyword property armorjewelry  auto
+keyword property sexlabnostrip  auto
 ;This file was cleaned with PapyrusSourceHeadliner 1
