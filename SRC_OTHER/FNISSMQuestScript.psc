@@ -25,6 +25,7 @@ int property debuglevel = 0 auto
 event oninit()
 endevent
 event onupdate()
+endevent
 int function getanimindex(int[] percentar)
 endfunction
 int function getrandomanimation(actor akfemale)
