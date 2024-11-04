@@ -1,35 +1,14 @@
-scriptName MuJointFixUtil hidden
-
-;type
-;0 : wrist
-;1 : knee
-;2 : butt
-;3 : anus
-;4 : height
-;10 : highheel
-function ToggleFixes(Actor target, int type, bool isEnable) global native
-function ReloadConfig() global native
-float function GetHeightOffset(Actor target) global native
-float function GetAutoHighHeelOffset(Actor target) global native
-
-
-bool function StopFixHeight(Actor target, bool isApplyHighheel) global
-	ToggleFixes(target, 4, false)
-	if isApplyHighheel
-		ToggleFixes(target, 10, true)
-	else
-		ToggleFixes(target, 10, false)
-	endif
+scriptname mujointfixutil hidden
+function togglefixes(actor target, int type, bool isenable) global native
+function reloadconfig() global native
+float function getheightoffset(actor target) global native
+float function getautohighheeloffset(actor target) global native
+bool function stopfixheight(actor target, bool isapplyhighheel) global
 endfunction
-
-bool function StartFixHeight(Actor target) global
-	ToggleFixes(target, 4, true)
+bool function startfixheight(actor target) global
 endfunction
-
-bool function StopFixButt(Actor target) global
-	ToggleFixes(target, 2, false)
+bool function stopfixbutt(actor target) global
 endfunction
-
-bool function StartFixButt(Actor target) global
-	ToggleFixes(target, 2, true)
+bool function startfixbutt(actor target) global
 endfunction
+;This file was cleaned with PapyrusSourceHeadliner 1
