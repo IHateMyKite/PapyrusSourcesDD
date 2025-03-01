@@ -3,4 +3,4 @@ event oneffectstart(actor targetref, actor casterref)
 endevent
 event onupdate()
 endevent
-;This file was cleaned with papyrusSourceHeadliner
+;This file was cleaned with PapyrusSourceHeadliner 1

@@ -355,4 +355,4 @@ bool property borgasmeffects hidden
 bool function get()
 endfunction
 endproperty
-;This file was cleaned with papyrusSourceHeadliner
+;This file was cleaned with PapyrusSourceHeadliner 1

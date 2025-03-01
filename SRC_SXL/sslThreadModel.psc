@@ -362,4 +362,4 @@ float function gettime()
 endfunction
 function setbedding(int flag = 0)
 endfunction
-;This file was cleaned with papyrusSourceHeadliner
+;This file was cleaned with PapyrusSourceHeadliner 1

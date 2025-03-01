@@ -283,4 +283,4 @@ function initarrays(int position)
 endfunction
 function exportjson()
 endfunction
-;This file was cleaned with papyrusSourceHeadliner
+;This file was cleaned with PapyrusSourceHeadliner 1

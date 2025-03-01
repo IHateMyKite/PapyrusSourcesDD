@@ -20,4 +20,4 @@ event setdebugmode(bool tomode)
 endevent
 function log(string msg, string type = "notice")
 endfunction
-;This file was cleaned with papyrusSourceHeadliner
+;This file was cleaned with PapyrusSourceHeadliner 1

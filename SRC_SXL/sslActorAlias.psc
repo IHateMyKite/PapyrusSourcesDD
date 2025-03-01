@@ -222,4 +222,4 @@ bool function isinposition(actor checkactor, objectreference checkmarker, float 
 int function calcenjoyment(float[] xp, float[] skillsamounts, bool isleadin, bool isfemaleactor, float timer, int onstage, int maxstage) global native
 int function intifelse(bool check, int istrue, int isfalse)
 endfunction
-;This file was cleaned with papyrusSourceHeadliner
+;This file was cleaned with PapyrusSourceHeadliner 1

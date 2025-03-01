@@ -107,4 +107,4 @@ int function calcphase(int strength, bool isfemale)
 endfunction
 function applypreset(actor actorref, int[] preset) global
 endfunction
-;This file was cleaned with papyrusSourceHeadliner
+;This file was cleaned with PapyrusSourceHeadliner 1

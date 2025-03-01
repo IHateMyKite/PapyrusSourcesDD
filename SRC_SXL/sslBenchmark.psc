@@ -41,4 +41,4 @@ event onupdate()
 endevent
 event hook(int tid, bool hasplayer)
 endevent
-;This file was cleaned with papyrusSourceHeadliner
+;This file was cleaned with PapyrusSourceHeadliner 1

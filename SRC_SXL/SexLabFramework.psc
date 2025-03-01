@@ -42,11 +42,19 @@ function clearforcedgender(actor actorref)
 endfunction
 int[] function gendercount(actor[] positions)
 endfunction
+int[] function transgendercount(actor[] positions)
+endfunction
 int function malecount(actor[] positions)
 endfunction
 int function femalecount(actor[] positions)
 endfunction
 int function creaturecount(actor[] positions)
+endfunction
+int function transmalecount(actor[] positions)
+endfunction
+int function transfemalecount(actor[] positions)
+endfunction
+int function transcreaturecount(actor[] positions)
 endfunction
 int function validateactor(actor actorref)
 endfunction
@@ -62,11 +70,23 @@ bool function isforbidden(actor actorref)
 endfunction
 actor function findavailableactor(objectreference centerref, float radius = 5000.0, int findgender = -1, actor ignoreref1 = none, actor ignoreref2 = none, actor ignoreref3 = none, actor ignoreref4 = none)
 endfunction
+actor function findavailableactorbyfaction(faction factionref, objectreference centerref, float radius = 5000.0, int findgender = -1, actor ignoreref1 = none, actor ignoreref2 = none, actor ignoreref3 = none, actor ignoreref4 = none, bool hasfaction = true)
+endfunction
+actor function findavailableactorwornform(int slotmask, objectreference centerref, float radius = 5000.0, int findgender = -1, actor ignoreref1 = none, actor ignoreref2 = none, actor ignoreref3 = none, actor ignoreref4 = none, bool avoidnostripkeyword = true, bool haswornform = true)
+endfunction
 actor function findavailablecreature(string racekey, objectreference centerref, float radius = 5000.0, int findgender = 2, actor ignoreref1 = none, actor ignoreref2 = none, actor ignoreref3 = none, actor ignoreref4 = none)
+endfunction
+actor function findavailablecreaturebyfaction(string racekey, faction factionref, objectreference centerref, float radius = 5000.0, int findgender = -1, actor ignoreref1 = none, actor ignoreref2 = none, actor ignoreref3 = none, actor ignoreref4 = none, bool hasfaction = true)
+endfunction
+actor function findavailablecreaturewornform(string racekey, int slotmask, objectreference centerref, float radius = 5000.0, int findgender = -1, actor ignoreref1 = none, actor ignoreref2 = none, actor ignoreref3 = none, actor ignoreref4 = none, bool avoidnostripkeyword = true, bool haswornform = true)
 endfunction
 actor[] function findavailablepartners(actor[] positions, int totalactors, int males = -1, int females = -1, float radius = 10000.0)
 endfunction
 actor[] function sortactors(actor[] positions, bool femalefirst = true)
+endfunction
+actor[] function sortactorsbyanimation(actor[] positions, sslbaseanimation animation = none)
+endfunction
+actor[] function sortcreatures(actor[] positions, sslbaseanimation animation = none)
 endfunction
 function addcum(actor actorref, bool vaginal = true, bool oral = true, bool anal = true)
 endfunction
@@ -152,6 +172,8 @@ sslbaseanimation[] function pickanimationsbyactors(actor[] positions, int limit 
 endfunction
 sslbaseanimation[] function getanimationsbydefault(int males, int females, bool isaggressive = false, bool usingbed = false, bool restrictaggressive = true)
 endfunction
+sslbaseanimation[] function getanimationsbydefaulttags(int males, int females, bool isaggressive = false, bool usingbed = false, bool restrictaggressive = true, string tags, string tagssuppressed = "", bool requireall = true)
+endfunction
 sslbaseanimation function getanimationbyname(string findname)
 endfunction
 sslbaseanimation function getanimationbyregistry(string registry)
@@ -170,21 +192,29 @@ sslbaseanimation[] function removetagged(sslbaseanimation[] anims, string tags)
 endfunction
 int function counttag(sslbaseanimation[] anims, string tags)
 endfunction
+int function counttagusage(string tags, bool ignoredisabled = true)
+endfunction
+int function countcreaturetagusage(string tags, bool ignoredisabled = true)
+endfunction
 string[] function getallanimationtags(int actorcount = -1, bool ignoredisabled = true)
 endfunction
 string[] function getallanimationtagsinarray(sslbaseanimation[] list)
 endfunction
 sslbaseanimation[] function getcreatureanimationsbyrace(int actorcount, race raceref)
 endfunction
-sslbaseanimation[] function getcreatureanimationsbyracekey(int actorcount, string racekey)
+sslbaseanimation[] function getcreatureanimationsbyracetags(int actorcount, race raceref, string tags, string tagsuppress = "", bool requireall = true)
 endfunction
 sslbaseanimation[] function getcreatureanimationsbyracegenders(int actorcount, race raceref, int malecreatures = 0, int femalecreatures = 0, bool forceuse = false)
 endfunction
-sslbaseanimation[] function getcreatureanimationsbyracetags(int actorcount, race raceref, string tags, string tagsuppress = "", bool requireall = true)
+sslbaseanimation[] function getcreatureanimationsbyracegenderstags(int actorcount, race raceref, int malecreatures = 0, int femalecreatures = 0, string tags, string tagsuppress = "", bool requireall = true)
+endfunction
+sslbaseanimation[] function getcreatureanimationsbyracekey(int actorcount, string racekey)
 endfunction
 sslbaseanimation[] function getcreatureanimationsbyracekeytags(int actorcount, string racekey, string tags, string tagsuppress = "", bool requireall = true)
 endfunction
-sslbaseanimation[] function getcreatureanimationsbytags(int actorcount, string tags, string tagsuppress = "", bool requireall = true)
+sslbaseanimation[] function getcreatureanimationsbyactors(int actorcount, actor[] positions)
+endfunction
+sslbaseanimation[] function getcreatureanimationsbyactorstags(int actorcount, actor[] positions, string tags, string tagsuppress = "", bool requireall = true)
 endfunction
 sslbaseanimation function getcreatureanimationbyname(string findname)
 endfunction
@@ -216,6 +246,8 @@ bool function hascustomvoice(actor actorref)
 endfunction
 sslbasevoice function getvoicebygender(int gender)
 endfunction
+sslbasevoice[] function getvoicesbygender(int gender)
+endfunction
 sslbasevoice function getvoicebyname(string findname)
 endfunction
 int function findvoicebyname(string findname)
@@ -224,11 +256,17 @@ sslbasevoice function getvoicebyslot(int slot)
 endfunction
 sslbasevoice function getvoicebytags(string tags, string tagsuppress = "", bool requireall = true)
 endfunction
-sslbaseexpression function pickexpressionbystatus(actor actorref, bool isvictim = false, bool isaggressor = false)
+sslbasevoice[] function getvoicesbytags(string tags, string tagsuppress = "", bool requireall = true)
 endfunction
 sslbaseexpression function pickexpression(actor actorref, actor victimref = none)
 endfunction
-sslbaseexpression function randomexpressionbytag(string tag)
+sslbaseexpression function pickexpressionbystatus(actor actorref, bool isvictim = false, bool isaggressor = false)
+endfunction
+sslbaseexpression[] function getexpressionsbystatus(actor actorref, bool isvictim = false, bool isaggressor = false)
+endfunction
+sslbaseexpression function pickexpressionsbytag(actor actorref, string tag)
+endfunction
+sslbaseexpression[] function getexpressionsbytag(actor actorref, string tag)
 endfunction
 sslbaseexpression function getexpressionbyname(string findname)
 endfunction
@@ -242,6 +280,8 @@ function closemouth(actor actorref)
 endfunction
 bool function ismouthopen(actor actorref)
 endfunction
+float[] function getcurrentmfg(actor actorref)
+endfunction
 function clearmfg(actor actorref)
 endfunction
 function clearphoneme(actor actorref)
@@ -249,8 +289,6 @@ endfunction
 function clearmodifier(actor actorref)
 endfunction
 function applypresetfloats(actor actorref, float[] preset)
-endfunction
-function applypreset(actor actorref, int[] preset)
 endfunction
 int function getenjoyment(int tid, actor actorref)
 endfunction
@@ -303,6 +341,8 @@ endfunction
 bool function hadplayersex(actor actorref)
 endfunction
 actor function mostusedplayersexpartner()
+endfunction
+actor[] function mostusedplayersexpartners(int maxactors = 5)
 endfunction
 actor function lastsexpartner(actor actorref)
 endfunction
@@ -480,6 +520,8 @@ bool function hascreatureanimation(race creaturerace, int gender = -1)
 endfunction
 sslbaseanimation[] function getanimationsbytag(int actorcount, string tag1, string tag2 = "", string tag3 = "", string tagsuppress = "", bool requireall = true)
 endfunction
+sslbaseanimation[] function getcreatureanimationsbytags(int actorcount, string tags, string tagsuppress = "", bool requireall = true)
+endfunction
 sslbasevoice function getvoicebytag(string tag1, string tag2 = "", string tagsuppress = "", bool requireall = true)
 endfunction
 function applycum(actor actorref, int cumid)
@@ -502,6 +544,10 @@ sslbaseexpression[] property expressions hidden
 sslbaseexpression[] function get()
 endfunction
 endproperty
+sslbaseexpression function randomexpressionbytag(string tag)
+endfunction
+function applypreset(actor actorref, int[] preset)
+endfunction
 sslthreadcontroller[] property threads hidden
 sslthreadcontroller[] function get()
 endfunction
@@ -529,6 +575,8 @@ endevent
 function log(string log, string type = "notice")
 endfunction
 state disabled
+sslthreadmodel function newthread(float timeout = 30.0)
+endfunction
 int function startsex(actor[] positions, sslbaseanimation[] anims, actor victim = none, objectreference centeron = none, bool allowbed = true, string hook = "")
 endfunction
 sslthreadcontroller function quickstart(actor actor1, actor actor2 = none, actor actor3 = none, actor actor4 = none, actor actor5 = none, actor victim = none, string hook = "", string animationtags = "")
@@ -540,4 +588,4 @@ state enabled
 event onbeginstate()
 endevent
 endstate
-;This file was cleaned with papyrusSourceHeadliner
+;This file was cleaned with PapyrusSourceHeadliner 1

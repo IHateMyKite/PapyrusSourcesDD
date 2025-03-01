@@ -42,4 +42,4 @@ sound function stringsfx(string sfx)
 endfunction
 function factorylog(string msg)
 endfunction
-;This file was cleaned with papyrusSourceHeadliner
+;This file was cleaned with PapyrusSourceHeadliner 1

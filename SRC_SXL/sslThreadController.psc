@@ -178,4 +178,4 @@ function playhotkeyfx(int i, bool backwards)
 endfunction
 event onkeydown(int keycode)
 endevent
-;This file was cleaned with papyrusSourceHeadliner
+;This file was cleaned with PapyrusSourceHeadliner 1

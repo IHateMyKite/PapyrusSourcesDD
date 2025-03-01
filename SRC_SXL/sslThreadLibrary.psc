@@ -47,4 +47,4 @@ function setupactorevent(actor actorref, string callback, int id = -1)
 endfunction
 function setup()
 endfunction
-;This file was cleaned with papyrusSourceHeadliner
+;This file was cleaned with PapyrusSourceHeadliner 1

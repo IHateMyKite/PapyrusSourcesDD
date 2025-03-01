@@ -61,4 +61,4 @@ float function timer(float timestamp, string log) global
 endfunction
 function enablefreecamera(bool enabling = true, float sucsm = 5.0) global
 endfunction
-;This file was cleaned with papyrusSourceHeadliner
+;This file was cleaned with PapyrusSourceHeadliner 1

@@ -14,4 +14,4 @@ sslbasevoice function create(int id)
 endfunction
 function initialize()
 endfunction
-;This file was cleaned with papyrusSourceHeadliner
+;This file was cleaned with PapyrusSourceHeadliner 1

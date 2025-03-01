@@ -55,4 +55,4 @@ function save(int id = -1)
 endfunction
 function initialize()
 endfunction
-;This file was cleaned with papyrusSourceHeadliner
+;This file was cleaned with PapyrusSourceHeadliner 1

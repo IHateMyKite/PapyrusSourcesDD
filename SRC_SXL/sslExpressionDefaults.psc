@@ -27,4 +27,4 @@ function custom4(int id)
 endfunction
 function custom5(int id)
 endfunction
-;This file was cleaned with papyrusSourceHeadliner
+;This file was cleaned with PapyrusSourceHeadliner 1

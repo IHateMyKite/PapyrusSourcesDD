@@ -89,4 +89,4 @@ sslbaseanimation[] function mergelists(sslbaseanimation[] list1, sslbaseanimatio
 endfunction
 bool[] function findtagged(sslbaseanimation[] anims, string tags)
 endfunction
-;This file was cleaned with papyrusSourceHeadliner
+;This file was cleaned with PapyrusSourceHeadliner 1

@@ -47,4 +47,4 @@ function werewolfvoice01(int id)
 endfunction
 function wolfvoice01(int id)
 endfunction
-;This file was cleaned with papyrusSourceHeadliner
+;This file was cleaned with PapyrusSourceHeadliner 1

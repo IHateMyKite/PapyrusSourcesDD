@@ -105,4 +105,4 @@ function rieklingmissionary(int id)
 endfunction
 function rieklingthreeway(int id)
 endfunction
-;This file was cleaned with papyrusSourceHeadliner
+;This file was cleaned with PapyrusSourceHeadliner 1
